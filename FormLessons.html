@@ -1,41 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Loging Screen</title>
 </head>
+
 <body>
-    
+
     <h1>My Form Practises</h1>
+    <marquee behavior="0vmax" direction="background-color">My First Try </marquee>
 
-    <form>
-        
+    <header>
+
+        <label for="Search">Search</label>
+        <input id="Search" type="search" placeholder="" name="Search">
+        <br>
+        <br>
+        <br>
+        <label for="URL">URL</label>
+        <input id="URL" type="url" placeholder="" name="URL">
+
+
+    </header>
+    <br>
+    <hr>
+    <!-- Here I test My Api With This Example But it didnt work Becuase You Need new HTTP Client Method To Talk With APIs (js-C#-PHP...) -->
+    <form action="https://localhost:7110/api/PeopleAPI/UpdatePerson" method="post">
+
         <fieldset>
-            
-                    <legend>Login Information</legend>
 
-                <div>
-                    <label for="UserName">User Name</label>
-                    <input id="UserName" type="text" placeholder="User Name">
-                </div>
-                <hr>
-                <div>
-                    <label for="Password">Password</label>
-                    <input id="Password" type="text" placeholder="Password">
-                </div>
-                <hr>
-                <div>
-                    <label for="Email">Email :-</label>
-                    <input id="Email" type="email" value="Put Your Email!">
-                </div>
-                <hr>
-                <div>
-                    <input type="submit" value="Login">
-                </div>
+            <!-- 
+                    {
+                          "personID": 0,
+                          "firstName": "string",
+                          "lastName": "string",
+                          "dateOfBirth": "2024-11-10T13:23:06.991Z",
+                          "gender": true,
+                          "schoolID": 0,
+                          "addressID": 0
+                    }              
+                -->
+            <legend>Login Information</legend>
+
+            <div>
+                <label for="PersonID">Person ID</label>
+                <input id="PersonID" type="text" placeholder="Person ID" name="PersonID">
+            </div>
+            <hr>
+            <div>
+                <label for="FirstName">First name</label>
+                <input id="FirstName" type="text" placeholder="FirstName" required name="FirstName" autofocus>
+            </div>
+            <hr>
+            <div>
+                <label for="dateOfBirth">Date of Birth :-</label>
+                <input id="dateOfBirth" type="date" value="Put Your dateOfBirth!" required name="dateOfBirth">
+            </div>
+            <hr>
+            <div>
+                <label for="LastName">Last Name</label>
+                <input id="LastName" type="text" placeholder="LastName" required name="LastName">
+            </div>
+            <hr>
+            <div>
+                <label for="Gender">Gender</label>
+                <input id="Gender" type="checkbox" placeholder="Gender" required name="Gender">
+            </div>
+            <hr>
+            <div>
+                <label for="schoolID">School ID :-</label>
+                <input id="schoolID" type="number" value="Put Your school ID!" required name="schoolID">
+            </div>
+            <hr>
+            <div>
+                <label for="addressID">Address ID :-</label>
+                <input id="addressID" type="number" value="Put Your Address ID!" required name="addressID" step="1"
+                    size="_blank">
+            </div>
+            <hr>
+            <div>
+                <label for="Age">Age</label>
+                <input id="Age" type="number" value="Put Your Address ID!" required name="Age" min="0" max="120">
+            </div>
+            <hr>
+            <div>
+                <label for="Phone">Phone Number</label>
+                <input id="Phone" type="tel" value="Put Your Phone Number!" required name="Phone" min="0" max="10" minlength="10" maxlength="10">
+            </div>
+            <hr>
+            <div>
+                <input type="submit" value="Login">
+            </div>
+            <div>
+                <input type="reset" value="Reset">
+            </div>
         </fieldset>
 
     </form>
 
 </body>
+
 </html>
